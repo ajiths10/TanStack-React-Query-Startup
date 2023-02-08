@@ -1,12 +1,12 @@
 import React, { FC } from "react";
 import "./App.css";
-import Home from "./Component/Home";
+import Routes from "./routes";
 
 const App: FC<any> = () => {
   return (
-    <div className="App">
-      <Home />
-    </div>
+    <>
+      <Routes />
+    </>
   );
 };
 
