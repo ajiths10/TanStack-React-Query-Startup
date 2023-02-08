@@ -7,20 +7,30 @@ const RQSuperHeros = () => {
     return response;
   };
 
-  let { isLoading, data }: { isLoading: boolean; data: any } = useQuery({
-    queryKey: ["super-hero"],
-    queryFn: fetchData,
-  });
+  let {
+    isLoading,
+    data,
+    isError,
+    error,
+  }: { isLoading: boolean; data: any; isError: boolean; error: any } = useQuery(
+    {
+      queryKey: ["super-hero"],
+      queryFn: fetchData,
+    }
+  );
 
+  console.log("hiii", isLoading, isError);
   return (
     <div>
       <h1>RQ Super Heros</h1>
       <div>
         {isLoading ? (
           "Loading..."
+        ) : isError ? (
+          <div>{error.message}</div>
         ) : (
           <div>
-            {data.map((buscat: any) => {
+            {data?.map((buscat: any) => {
               return (
                 <div key={buscat.id}>
                   <div>{buscat.id}</div>

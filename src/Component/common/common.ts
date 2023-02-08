@@ -8,9 +8,10 @@ export const getAllData = () => {
       setTimeout(() => {
         resolve(response.data);
       }, 1500);
+      //throw new Error("404 page not found!");
     } catch (error) {
       console.log(error);
-      reject([]);
+      reject(error);
     }
   });
 };

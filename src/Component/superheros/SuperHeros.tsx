@@ -4,13 +4,19 @@ import { getAllData } from "../common/common";
 const SuperHeros = () => {
   const [data, setData] = useState([]);
   const [isLoading, setLoading] = useState(false);
+  const [isError, setError] = useState("");
 
   useEffect(() => {
     setLoading(true);
-    getAllData().then((res: any) => {
-      setData(res);
-      setLoading(false);
-    });
+    getAllData()
+      .then((res: any) => {
+        setData(res);
+        setLoading(false);
+      })
+      .catch((err) => {
+        setError(err.message);
+        setLoading(false);
+      });
   }, []);
 
   return (
@@ -19,6 +25,8 @@ const SuperHeros = () => {
       <div>
         {isLoading ? (
           "Loading..."
+        ) : isError ? (
+          <div>{isError}</div>
         ) : (
           <div>
             {data.map((buscat: any) => {
