@@ -37,5 +37,19 @@
       "name": "spiderman",
       "alterEgo": "Petter parker"
     }
+  ],
+  "friends": [
+    {
+      "id": 1,
+      "name": "Chandler Bing"
+    },
+    {
+      "id": 2,
+      "name": "Joey Tribbiani"
+    },
+    {
+      "id": 3,
+      "name": "Rachel Green"
+    }
   ]
 }

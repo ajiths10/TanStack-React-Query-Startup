@@ -6,6 +6,7 @@ import SuperHeros from "../Component/superheros/SuperHeros";
 import TestRQ from "../Component/Home";
 import NavBar from "../Component/Nav";
 import PersonalDetails from "../Component/superheros/PersonalDetails";
+import ParallelData from "../Component/superheros/ParallelData";
 
 const routes = () => {
   return (
@@ -17,6 +18,7 @@ const routes = () => {
         <Route path="/rq-superheros" element={<RQSuperHeros />} />
         <Route path="/test" element={<TestRQ />} />
         <Route path="/hero/:id" element={<PersonalDetails />} />
+        <Route path="/parallel-route" element={<ParallelData />} />
       </Routes>
     </div>
   );

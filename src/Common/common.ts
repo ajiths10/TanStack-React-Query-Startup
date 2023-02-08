@@ -30,3 +30,7 @@ export const getHeroById = (data: any) => {
   let id = data.queryKey[1];
   return axios.get(`${URL}/superheroes/${id}`);
 };
+
+export const dynamicAPi = (data: any) => {
+  return axios.get(`${URL}/${data.queryKey[1]}`);
+};
