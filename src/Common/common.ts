@@ -23,14 +23,10 @@ export const getAllData = () => {
 };
 
 export const addNewData = (data: data) => {
-  return new Promise(async (resolve, reject) => {
-    try {
-      let response = await axios.post(`${URL}/superheroes/`, data);
-      resolve(response.data);
-      //throw new Error("404 page not found!");
-    } catch (error) {
-      console.log(error);
-      reject(error);
-    }
-  });
+  return axios.post(`${URL}/superheroes/`, data);
+};
+
+export const getHeroById = (data: any) => {
+  let id = data.queryKey[1];
+  return axios.get(`${URL}/superheroes/${id}`);
 };

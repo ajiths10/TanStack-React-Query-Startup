@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import { getAllData } from "../Common/common";
+import { getAllData, getHeroById } from "../Common/common";
 
 export interface hero {
   id: number;
@@ -19,7 +19,7 @@ const fetchData = async () => {
 
 export const SuperHeroQuery = ({ onSuccess, onError }: any) => {
   return useQuery({
-    queryKey: ["super-hero"],
+    queryKey: ["super-heros"],
     queryFn: fetchData,
     // cacheTime: 5000, //Default time 5mins
     // staleTime: 10000, //keep data as fresh for 10sec, So no new api call will trigger until it chages to stale ( Default staleTime is 0sec )
@@ -35,5 +35,15 @@ export const SuperHeroQuery = ({ onSuccess, onError }: any) => {
       });
       return res;
     },
+  });
+};
+
+export const HeroPersonalQuery = ({ onSuccess, onError, id }: any) => {
+  return useQuery({
+    queryKey: ["heros-personal-queries", id],
+    queryFn: getHeroById,
+    onSuccess: onSuccess,
+    onError: onError,
+    staleTime: 10000000, // will no refetch untill this time runs out (keep as fresh data)
   });
 };

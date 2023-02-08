@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { SuperHeroQuery, hero } from "../../Hooks/superHeroQuery";
+import { Link } from "react-router-dom";
 
 interface qry {
   isLoading: boolean;
@@ -12,17 +13,17 @@ interface qry {
 
 const RQSuperHeros = () => {
   const onSuccess = () => {
-    console.log("Perform side effect after dara fatching");
+    console.log("Perform side effect after data fatching Success");
   };
   const onError = () => {
-    console.log("Perform side effect after dara fatching");
+    console.log("Perform side effect after data fatching Error");
   };
 
   let { isLoading, data, isError, error, isFetching, refetch }: qry =
     SuperHeroQuery({ onSuccess, onError });
 
   return (
-    <div>
+    <div className="m-5">
       <h1>RQ Super Heros</h1>
       <div>
         {isLoading ? (
@@ -32,13 +33,9 @@ const RQSuperHeros = () => {
         ) : (
           <div>
             {data?.map((buscat: hero) => {
-              console.log("hiiii", data);
               return (
-                <div key={buscat.id}>
-                  <div>{buscat.id}</div>
-                  <div>{buscat.name}</div>
-                  <div>{buscat.alterEgo}</div>
-                  {/* <div>{buscat.crypto.toString()}</div> */}
+                <div key={buscat.id} className="m-5">
+                  <Link to={`/hero/${buscat.id}`}>{buscat.name}</Link>
                 </div>
               );
             })}

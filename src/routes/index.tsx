@@ -5,6 +5,7 @@ import RQSuperHeros from "../Component/superheros/RQSuperHeros";
 import SuperHeros from "../Component/superheros/SuperHeros";
 import TestRQ from "../Component/Home";
 import NavBar from "../Component/Nav";
+import PersonalDetails from "../Component/superheros/PersonalDetails";
 
 const routes = () => {
   return (
@@ -15,6 +16,7 @@ const routes = () => {
         <Route path="/normal-superheros" element={<SuperHeros />} />
         <Route path="/rq-superheros" element={<RQSuperHeros />} />
         <Route path="/test" element={<TestRQ />} />
+        <Route path="/hero/:id" element={<PersonalDetails />} />
       </Routes>
     </div>
   );
