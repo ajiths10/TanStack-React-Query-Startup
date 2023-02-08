@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { getAllData } from "../common/common";
+import { getAllData } from "../../Common/common";
 
 const SuperHeros = () => {
   const [data, setData] = useState([]);
