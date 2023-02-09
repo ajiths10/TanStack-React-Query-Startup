@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { SuperHeroQuery, hero } from "../../Hooks/superHeroQuery";
 import { Link } from "react-router-dom";
+import AddNewHeroForm from "./Form/AddNewHeroForm";
 
 interface qry {
   isLoading: boolean;
@@ -32,13 +33,16 @@ const RQSuperHeros = () => {
           <div>{error.message}</div>
         ) : (
           <div>
-            {data?.map((buscat: hero) => {
-              return (
-                <div key={buscat.id} className="m-5">
-                  <Link to={`/hero/${buscat.id}`}>{buscat.name}</Link>
-                </div>
-              );
-            })}
+            <AddNewHeroForm />
+            <div>
+              {data?.map((buscat: hero) => {
+                return (
+                  <div key={buscat.id} className="m-5">
+                    <Link to={`/hero/${buscat.id}`}>{buscat.name}</Link>
+                  </div>
+                );
+              })}
+            </div>
           </div>
         )}
       </div>

@@ -36,6 +36,11 @@
       "id": 4,
       "name": "spiderman",
       "alterEgo": "Petter parker"
+    },
+    {
+      "name": "Doctor Strange",
+      "alterEgo": "Doctor Strange",
+      "id": 5
     }
   ],
   "friends": [
@@ -61,7 +66,11 @@
   "channels": [
     {
       "id": "xsacekve-asckaevewg-bnjnolkmliieowjvnjv",
-      "courses": ["react", "vue", "angular"]
+      "courses": [
+        "react",
+        "vue",
+        "angular"
+      ]
     }
   ],
   "colors": [

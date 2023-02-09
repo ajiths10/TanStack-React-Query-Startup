@@ -22,7 +22,11 @@ export const getAllData = () => {
   });
 };
 
-export const addNewData = (data: data) => {
+export const getAllData_ForQuery = () => {
+  return axios.get(`${URL}/superheroes`);
+};
+
+export const addNewSuperHero = (data: data) => {
   return axios.post(`${URL}/superheroes/`, data);
 };
 
