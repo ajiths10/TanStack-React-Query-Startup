@@ -14,6 +14,9 @@ const NavBar = () => {
         <Link to="/parallel-route" className="ml-5">
           Parallel routes
         </Link>
+        <Link to="/dependent-querry" className="ml-5">
+          Dependent querry
+        </Link>
       </div>
       <div className=" col-span-1">Logout</div>
     </div>

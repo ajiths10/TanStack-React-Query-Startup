@@ -51,5 +51,17 @@
       "id": 3,
       "name": "Rachel Green"
     }
+  ],
+  "users": [
+    {
+      "id": "ajiths10@email.com",
+      "channelId": "xsacekve-asckaevewg-bnjnolkmliieowjvnjv"
+    }
+  ],
+  "channels": [
+    {
+      "id": "xsacekve-asckaevewg-bnjnolkmliieowjvnjv",
+      "courses": ["react", "vue", "angular"]
+    }
   ]
 }

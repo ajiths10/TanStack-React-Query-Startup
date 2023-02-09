@@ -1,18 +1,5 @@
 import { DynamicParallelQuerys } from "../../Hooks/dynamicParallelQuerys";
-
-const Wraper = (props: any) => {
-  return (
-    <div>
-      {props.isLoading ? (
-        "Loading..."
-      ) : props.isError ? (
-        <div>{props.error.message}</div>
-      ) : (
-        <>{props.children}</>
-      )}
-    </div>
-  );
-};
+import { Wraper } from "./Common";
 
 const ParallelData = () => {
   let dataHandle = [

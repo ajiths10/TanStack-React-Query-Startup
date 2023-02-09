@@ -34,3 +34,11 @@ export const getHeroById = (data: any) => {
 export const dynamicAPi = (data: any) => {
   return axios.get(`${URL}/${data.queryKey[1]}`);
 };
+
+export const getUsersById = (data: any) => {
+  return axios.get(`${URL}/users/${data.queryKey[1]}`);
+};
+
+export const getChannelById = (data: any) => {
+  return axios.get(`${URL}/channels/${data.queryKey[1]}`);
+};
