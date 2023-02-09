@@ -17,6 +17,9 @@ const NavBar = () => {
         <Link to="/dependent-querry" className="ml-5">
           Dependent querry
         </Link>
+        <Link to="/pagination-querry" className="ml-5">
+          Pagination querry
+        </Link>
       </div>
       <div className=" col-span-1">Logout</div>
     </div>

@@ -8,6 +8,7 @@ import NavBar from "../Component/Nav";
 import PersonalDetails from "../Component/superheros/PersonalDetails";
 import ParallelData from "../Component/superheros/ParallelData";
 import DependentQuery from "../Component/superheros/DependentQuery";
+import PaginationQuery from "../Component/superheros/PaginationQuery";
 
 const routes = () => {
   return (
@@ -21,6 +22,7 @@ const routes = () => {
         <Route path="/hero/:id" element={<PersonalDetails />} />
         <Route path="/parallel-route" element={<ParallelData />} />
         <Route path="/dependent-querry" element={<DependentQuery />} />
+        <Route path="/pagination-querry" element={<PaginationQuery />} />
       </Routes>
     </div>
   );

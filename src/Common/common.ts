@@ -42,3 +42,7 @@ export const getUsersById = (data: any) => {
 export const getChannelById = (data: any) => {
   return axios.get(`${URL}/channels/${data.queryKey[1]}`);
 };
+
+export const getColorsByPage = ({ queryKey }: any) => {
+  return axios.get(`${URL}/colors?_limit=2&_page=${queryKey[1]}`);
+};
