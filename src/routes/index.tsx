@@ -9,6 +9,7 @@ import PersonalDetails from "../Component/superheros/PersonalDetails";
 import ParallelData from "../Component/superheros/ParallelData";
 import DependentQuery from "../Component/superheros/DependentQuery";
 import PaginationQuery from "../Component/superheros/PaginationQuery";
+import InfinateQuery from "../Component/superheros/InfinateQuery";
 
 const routes = () => {
   return (
@@ -23,6 +24,7 @@ const routes = () => {
         <Route path="/parallel-route" element={<ParallelData />} />
         <Route path="/dependent-querry" element={<DependentQuery />} />
         <Route path="/pagination-querry" element={<PaginationQuery />} />
+        <Route path="/infinate-querry" element={<InfinateQuery />} />
       </Routes>
     </div>
   );

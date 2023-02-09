@@ -46,3 +46,7 @@ export const getChannelById = (data: any) => {
 export const getColorsByPage = ({ queryKey }: any) => {
   return axios.get(`${URL}/colors?_limit=2&_page=${queryKey[1]}`);
 };
+
+export const getColorsInfinate = ({ pageParam = 1 }: any) => {
+  return axios.get(`${URL}/colors?_limit=2&_page=${pageParam}`);
+};

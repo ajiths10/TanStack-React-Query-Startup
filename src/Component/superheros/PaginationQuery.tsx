@@ -10,7 +10,6 @@ interface color {
 const PaginationQuery = () => {
   const [pagination, setPagination] = useState<number>(1);
 
-  let TEMP_USERID = "ajiths10@email.com";
   //side effects
   const onSuccess = () => {
     console.log("Perform side effect after data fatching Success");
