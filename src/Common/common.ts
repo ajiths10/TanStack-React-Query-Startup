@@ -1,4 +1,5 @@
 import axios from "axios";
+import { request } from "../util/axios-util";
 let URL = "http://localhost:4000";
 
 interface data {
@@ -23,11 +24,13 @@ export const getAllData = () => {
 };
 
 export const getAllData_ForQuery = () => {
-  return axios.get(`${URL}/superheroes`);
+  // return axios.get(`${URL}/superheroes`);
+  return request({ url: "/superheroes" });
 };
 
 export const addNewSuperHero = (data: data) => {
-  return axios.post(`${URL}/superheroes/`, data);
+  // return axios.post(`${URL}/superheroes/`, data);
+  return request({ url: "/superheroes", method: "post", data });
 };
 
 export const getHeroById = (data: any) => {

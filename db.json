@@ -66,11 +66,7 @@
   "channels": [
     {
       "id": "xsacekve-asckaevewg-bnjnolkmliieowjvnjv",
-      "courses": [
-        "react",
-        "vue",
-        "angular"
-      ]
+      "courses": ["react", "vue", "angular"]
     }
   ],
   "colors": [
